@@ -149,3 +149,18 @@ __git_complete g __git_main" >> ~/.bash_aliases
 # Hack to pre-install bundled gems
 RUN echo "rvm use 2.7.3" >> ~/.bashrc
 RUN echo "rvm_silence_path_mismatch_check_flag=1" >> ~/.rvmrc
+
+# Python
+# You could use `gitpod/workspace-full` as well.
+FROM gitpod/workspace-python
+
+RUN pyenv install 3.11 \
+    && pyenv global 3.11
+
+FROM gitpod/workspace-full
+
+USER gitpod
+
+RUN pip install numpy
+RUN pip install sklearn
+RUN pip install statsmodels

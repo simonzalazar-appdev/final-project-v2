@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soccer Event Analysis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+      /* Custom CSS */
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .toggle-container {
+        max-height: 200px;
+        overflow-y: scroll;
+        padding-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      .toggle-box {
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 34px;
+        background-color: #f1f1f1;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .toggle-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #007bff;
+        border-radius: 20px;
+        transition: transform 0.3s;
+      }
+
+      .toggle-checkbox {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-bar {
+        transform: translateX(100%);
+      }
+
+      .toggle-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-weight: bold;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Soccer Event Analysis</h1>
+      <form action="/insert_model" method="post">
+        <div class="row">
+          <div class="col">
+            <h5>Select Home Club:</h5>
+            <div class="toggle-container">
+              <% @clubs.each do |a_club| %>
+                <div class="custom-control custom-switch">
+                  <input type="radio" value="<%=a_club.club_id2%>" name="team_home"><%=a_club.club_name%></input>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col">
+          <h5>Select Away Club:</h5>
+          <div class="toggle-container">
+            <% @clubs.each do |a_club| %>
+              <div class="custom-control custom-switch">
+                <input type="radio" value="<%=a_club.club_id2%>" name="team_away"><%=a_club.club_name%></input>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col">
+        <h5>Select Season:</h5>
+        <div class="toggle-container">
+          <% @seasons.each do |a_season| %>
+            <div class="custom-control custom-switch">
+              <input type="radio" value="<%=a_season.season%>" name="season"><%=a_season.season%></input>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col">
+      <h5>Select Variables for Analysis:</h5>
+      <div class="toggle-container">
+        <% @player_vars.each do |a_var| %>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="<%=a_var.var%>" name="<%=a_var.var%>">
+            <label class="custom-control-label" for="<%=a_var.var%>"><%=a_var.desc%></label>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary">Perform Analysis</button>
+</div>
+</form>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

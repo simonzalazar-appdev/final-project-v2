@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      List of all seasons
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new season
+    </h2>
+
+    <form action="/insert_season" method="post">
+      <div>
+        <label for="season_box">
+          Season
+        </label>
+
+        <input type="text" id="season_box" name="query_season">
+      </div>
+
+      <button>
+        Create season
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Season
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_seasons.each do |a_season| %>
+      <tr>
+        <td>
+          <%= a_season.id %>
+        </td>
+
+        <td>
+          <%= a_season.season %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_season.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_season.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/seasons/<%= a_season.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

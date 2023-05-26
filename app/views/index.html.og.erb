@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soccer Event Analysis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+      /* Custom CSS */
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+    .toggle-container {
+      max-height: 200px;
+      overflow-y: scroll;
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Soccer Event Analysis</h1>
+      <form action="/insert_model" method="post">
+        <div class="toggle-container">
+          <% @result_2.each do |a_var| %>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="<%=a_var%>">
+            <label class="custom-control-label" for="<%=a_var%>"><%=a_var%></label>
+          </div>
+          <% end %>
+        </div>
+        <button class="btn btn-primary">Perform Analysis</button>
+      </div>
+    </form>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

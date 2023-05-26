@@ -1,0 +1,102 @@
+<div>
+  <div>
+    <h1>
+      List of all player vars
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new player var
+    </h2>
+
+    <form action="/insert_player_var" method="post">
+      <div>
+        <label for="var_box">
+          Var
+        </label>
+
+        <input type="text" id="var_box" name="query_var">
+      </div>
+
+      <div>
+        <label for="desc_box">
+          Desc
+        </label>
+
+        <input type="text" id="desc_box" name="query_desc">
+      </div>
+
+      <button>
+        Create player var
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Var
+        </th>
+
+        <th>
+          Desc
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_player_vars.each do |a_player_var| %>
+      <tr>
+        <td>
+          <%= a_player_var.id %>
+        </td>
+
+        <td>
+          <%= a_player_var.var %>
+        </td>
+
+        <td>
+          <%= a_player_var.desc %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_player_var.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_player_var.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/player_vars/<%= a_player_var.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

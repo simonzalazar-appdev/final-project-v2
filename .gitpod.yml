@@ -1,6 +1,9 @@
 image: patrickmckernin/msm-signin-2022-spring
 
 tasks:
+  - init: pip3 install -r requirements.txt
+    command: python3 src/app.py
+
   - before: |
       bin/setup
 ports:
@@ -15,3 +18,4 @@ vscode:
     - vortizhe.simple-ruby-erb
     - mbessey.vscode-rufo
     - aliariff.vscode-erb-beautify
+

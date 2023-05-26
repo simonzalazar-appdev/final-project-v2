@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+statsmodels
+datetime
+mplsoccer
+matplotlib
+data_structure

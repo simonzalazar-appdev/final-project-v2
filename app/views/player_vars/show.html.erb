@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      Player var #<%= @the_player_var.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/player_vars">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_player_var/<%= @the_player_var.id %>">
+          Delete player var
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Var
+      </dt>
+      <dd>
+        <%= @the_player_var.var %>
+      </dd>
+
+      <dt>
+        Desc
+      </dt>
+      <dd>
+        <%= @the_player_var.desc %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_player_var.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_player_var.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit player var
+    </h2>
+
+    <form action="/modify_player_var/<%= @the_player_var.id %>"  method="post" >
+      <div>
+        <label for="var_box">
+          Var
+        </label>
+
+        <input type="text" id="var_box" name="query_var" value="<%= @the_player_var.var %>">
+      </div>
+
+      <div>
+        <label for="desc_box">
+          Desc
+        </label>
+
+        <input type="text" id="desc_box" name="query_desc" value="<%= @the_player_var.desc %>">
+      </div>
+
+      <button>
+        Update player var
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

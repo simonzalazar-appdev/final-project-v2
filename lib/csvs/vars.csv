@@ -1,0 +1,128 @@
+var,description
+overall,Overall score
+potential,Potential
+value_eur,Value
+wage_eur,Wage
+age,Age
+height_cm,Height
+weight_kg,Weight
+league_id,League
+preferred_foot,Preferred foot
+weak_foot,Weak foot
+skill_moves,Skill moves
+international_reputation,International Reputation
+work_rate,Work Rate
+body_type,Body Type
+tag_#Dribbler,Tag #Dribbler
+tag_#AerialThreat,Tag #Aerialthreat
+tag_#Speedster,Tag #Speedster
+tag_#DistanceShooter,Tag #Distanceshooter
+tag_#Tackling,Tag #Tackling
+tag_#Poacher,Tag #Poacher
+tag_#Engine,Tag #Engine
+tag_#Crosser,Tag #Crosser
+tag_#Playmaker,Tag #Playmaker
+tag_#ClinicalFinisher,Tag #Clinicalfinisher
+tag_#TacticianÂ ,Tag #Tactician� 
+tag_#TacklingÂ ,Tag #Tackling� 
+tag_#Acrobat,Tag #Acrobat
+tag_#PlaymakerÂ ,Tag #Playmaker� 
+tag_#Tactician,Tag #Tactician
+tag_#Strength,Tag #Strength
+tag_#FKSpecialist,Tag #Fkspecialist
+tag_#CompleteForward,Tag #Completeforward
+tag_#CompleteMidfielder,Tag #Completemidfielder
+tag_#CompleteDefender,Tag #Completedefender
+trait_LongShotTaker(AI),Trait Longshottaker(Ai)
+trait_FinesseShot,Trait Finesseshot
+trait_Flair,Trait Flair
+trait_Leadership,Trait Leadership
+trait_ComesForCrosses,Trait Comesforcrosses
+trait_SpeedDribbler(AI),Trait Speeddribbler(Ai)
+trait_GKLongThrow,Trait Gklongthrow
+trait_LongPasser(AI),Trait Longpasser(Ai)
+trait_DivesIntoTackles(AI),Trait Divesintotackles(Ai)
+trait_RushesOutOfGoal,Trait Rushesoutofgoal
+trait_OutsideFootShot,Trait Outsidefootshot
+trait_PowerHeader,Trait Powerheader
+trait_CautiousWithCrosses,Trait Cautiouswithcrosses
+trait_ChipShot(AI),Trait Chipshot(Ai)
+trait_TeamPlayer,Trait Teamplayer
+trait_Playmaker(AI),Trait Playmaker(Ai)
+trait_EarlyCrosser,Trait Earlycrosser
+trait_InjuryProne,Trait Injuryprone
+trait_TechnicalDribbler(AI),Trait Technicaldribbler(Ai)
+trait_SolidPlayer,Trait Solidplayer
+trait_SaveswithFeet,Trait Saveswithfeet
+trait_GiantThrow-in,Trait Giantthrow-In
+trait_PowerFree-Kick,Trait Powerfree-Kick
+trait_OneClubPlayer,Trait Oneclubplayer
+pace,Pace
+shooting,Shooting
+passing,Passing
+dribbling,Dribbling
+defending,Defending
+physic,Physic
+attacking_crossing,Attacking Crossing
+attacking_finishing,Attacking Finishing
+attacking_heading_accuracy,Attacking Heading Accuracy
+attacking_short_passing,Attacking Short Passing
+attacking_volleys,Attacking Volleys
+skill_dribbling,Skill Dribbling
+skill_curve,Skill Curve
+skill_fk_accuracy,Skill Fk Accuracy
+skill_long_passing,Skill Long Passing
+skill_ball_control,Skill Ball Control
+movement_acceleration,Movement Acceleration
+movement_sprint_speed,Movement Sprint Speed
+movement_agility,Movement Agility
+movement_reactions,Movement Reactions
+movement_balance,Movement Balance
+power_shot_power,Power Shot Power
+power_jumping,Power Jumping
+power_stamina,Power Stamina
+power_strength,Power Strength
+power_long_shots,Power Long Shots
+mentality_aggression,Mentality Aggression
+mentality_interceptions,Mentality Interceptions
+mentality_positioning,Mentality Positioning
+mentality_vision,Mentality Vision
+mentality_penalties,Mentality Penalties
+mentality_composure,Mentality Composure
+defending_marking_awareness,Defending Marking Awareness
+defending_standing_tackle,Defending Standing Tackle
+defending_sliding_tackle,Defending Sliding Tackle
+goalkeeping_diving,Goalkeeping Diving
+goalkeeping_handling,Goalkeeping Handling
+goalkeeping_kicking,Goalkeeping Kicking
+goalkeeping_positioning,Goalkeeping Positioning
+goalkeeping_reflexes,Goalkeeping Reflexes
+goalkeeping_speed,Goalkeeping Speed
+ls,Ls
+st,St
+rs,Rs
+lw,Lw
+lf,Lf
+cf,Cf
+rf,Rf
+rw,Rw
+lam,Lam
+cam,Cam
+ram,Ram
+lm,Lm
+lcm,Lcm
+cm,Cm
+rcm,Rcm
+rm,Rm
+lwb,Lwb
+ldm,Ldm
+cdm,Cdm
+rdm,Rdm
+rwb,Rwb
+lb,Lb
+lcb,Lcb
+cb,Cb
+rcb,Rcb
+rb,Rb
+gk,Gk
+best_position,Best Position

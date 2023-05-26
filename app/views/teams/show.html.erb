@@ -1,0 +1,116 @@
+<div>
+  <div>
+    <h1>
+      Team #<%= @the_team.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/teams">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_team/<%= @the_team.id %>">
+          Delete team
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Club league
+      </dt>
+      <dd>
+        <%= @the_team.club_league %>
+      </dd>
+
+      <dt>
+        Club name
+      </dt>
+      <dd>
+        <%= @the_team.club_name %>
+      </dd>
+
+      <dt>
+        League
+      </dt>
+      <dd>
+        <%= @the_team.league_id %>
+      </dd>
+
+      <dt>
+        Club id2
+      </dt>
+      <dd>
+        <%= @the_team.club_id2 %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_team.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_team.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit team
+    </h2>
+
+    <form action="/modify_team/<%= @the_team.id %>"  method="post" >
+      <div>
+        <label for="club_league_box">
+          Club league
+        </label>
+
+        <input type="text" id="club_league_box" name="query_club_league" value="<%= @the_team.club_league %>">
+      </div>
+
+      <div>
+        <label for="club_name_box">
+          Club name
+        </label>
+
+        <input type="text" id="club_name_box" name="query_club_name" value="<%= @the_team.club_name %>">
+      </div>
+
+      <div>
+        <label for="league_id_box">
+          League
+        </label>
+
+        <input type="text" id="league_id_box" name="query_league_id" value="<%= @the_team.league_id %>">
+      </div>
+
+      <div>
+        <label for="club_id2_box">
+          Club id2
+        </label>
+
+        <input type="text" id="club_id2_box" name="query_club_id2" value="<%= @the_team.club_id2 %>">
+      </div>
+
+      <button>
+        Update team
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

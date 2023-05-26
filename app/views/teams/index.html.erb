@@ -1,0 +1,134 @@
+<div>
+  <div>
+    <h1>
+      List of all teams
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new team
+    </h2>
+
+    <form action="/insert_team" method="post">
+      <div>
+        <label for="club_league_box">
+          Club league
+        </label>
+
+        <input type="text" id="club_league_box" name="query_club_league">
+      </div>
+
+      <div>
+        <label for="club_name_box">
+          Club name
+        </label>
+
+        <input type="text" id="club_name_box" name="query_club_name">
+      </div>
+
+      <div>
+        <label for="league_id_box">
+          League
+        </label>
+
+        <input type="text" id="league_id_box" name="query_league_id">
+      </div>
+
+      <div>
+        <label for="club_id2_box">
+          Club id2
+        </label>
+
+        <input type="text" id="club_id2_box" name="query_club_id2">
+      </div>
+
+      <button>
+        Create team
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Club league
+        </th>
+
+        <th>
+          Club name
+        </th>
+
+        <th>
+          League
+        </th>
+
+        <th>
+          Club id2
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_teams.each do |a_team| %>
+      <tr>
+        <td>
+          <%= a_team.id %>
+        </td>
+
+        <td>
+          <%= a_team.club_league %>
+        </td>
+
+        <td>
+          <%= a_team.club_name %>
+        </td>
+
+        <td>
+          <%= a_team.league_id %>
+        </td>
+
+        <td>
+          <%= a_team.club_id2 %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_team.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_team.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/teams/<%= a_team.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>
